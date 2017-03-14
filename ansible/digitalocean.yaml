@@ -1,4 +1,6 @@
 ---
 - hosts: digital_ocean
   roles:
+    - role: base
     - role: firewall
+    - role: app

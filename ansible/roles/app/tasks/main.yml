@@ -1,0 +1,20 @@
+---
+- name: Create app directory
+  file: path=/opt/app-0.1 state=directory  
+    
+- name: Download app
+  get_url:
+    url: https://github.com/mahnve/go-web/releases/download/0.1/run 
+    dest: "/opt/app-0.1/app"
+    mode: 0755    
+  notify: restart app    
+
+- name: symlink
+  file: src=/opt/app-0.1 dest=/opt/app state=link
+
+- name: upload supervisord template    
+  template: src=supervisord.template dest=/etc/supervisor/conf.d/app.conf      
+  notify: restart app
+
+- name: load app
+  supervisorctl: name=app state=present
