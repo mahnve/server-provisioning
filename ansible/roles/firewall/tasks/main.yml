@@ -1,0 +1,22 @@
+---
+- name: install ufw
+  apt: name=ufw
+
+- name: open our web port 
+  ufw: 
+    rule: allow
+    port: 9090
+  notify: reload ufw
+
+- name: open SSH port
+  ufw: 
+    rule: allow
+    port: 22
+  notify: reload ufw
+
+- name: enable ufw
+  ufw:
+    state: enabled
+    policy: deny
+    
+    

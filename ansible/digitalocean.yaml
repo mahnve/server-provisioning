@@ -1,0 +1,4 @@
+---
+- hosts: digital_ocean
+  roles:
+    - role: firewall
