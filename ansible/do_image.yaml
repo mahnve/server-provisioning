@@ -1,0 +1,6 @@
+---
+- hosts: default
+  roles:
+    - role: firewall
+    - role: base
+    - role: app

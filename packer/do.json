@@ -1,0 +1,23 @@
+{
+    "variables": {
+        "do-token": "{{env `DO_TOKEN`}}"
+    },
+    "builders": [
+        {
+            "type": "digitalocean",
+            "api_token": "{{user `do-token`}}",
+            "image": "debian-8-x64",
+            "region": "FRA1",
+            "size": "512mb",
+            "ssh_username": "root"
+        }
+    ],
+
+    "provisioners": [
+        {
+            "type": "ansible",
+            "playbook_file": "../ansible/do_image.yaml",
+            "user": "root"
+        }
+    ]
+}
