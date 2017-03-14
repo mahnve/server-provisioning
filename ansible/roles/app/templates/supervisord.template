@@ -1,2 +1,2 @@
 [program:app]
-command=/opt/app/app
+command={{ app_link }}/app
