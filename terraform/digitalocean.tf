@@ -6,12 +6,12 @@ provider "digitalocean" {
 }
 
 resource "digitalocean_ssh_key" "default" {
-  name = "tf-key"
+  name = "demo-tf-key"
   public_key = "${file("${var.public_key}")}"
 }
 
 resource "digitalocean_droplet" "test-server" {
-  name="test-server"
+  name="demo-test-server"
   region="ams2"
   size="512mb"
   image="debian-8-x64"

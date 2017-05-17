@@ -7,7 +7,7 @@
             "type": "digitalocean",
             "api_token": "{{user `do-token`}}",
             "image": "debian-8-x64",
-            "region": "FRA1",
+            "region": "AMS2",
             "size": "512mb",
             "ssh_username": "root"
         }

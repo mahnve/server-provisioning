@@ -1,6 +1,6 @@
 ---
 - name: Install base packages
-  apt: name={{ item }}  
+  apt: name={{ item }}  update_cache=yes
   with_items:
     - supervisor
     - git
