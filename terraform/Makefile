@@ -6,3 +6,6 @@ tf-apply:
 
 tf-plan:
 	terraform plan
+
+tf-destroy:
+	terraform destroy

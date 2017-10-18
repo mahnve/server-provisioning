@@ -1,6 +1,7 @@
 ---
-- hosts: digital_ocean
+- hosts: test_server
+  remote_user: root
   roles:
     - role: base
     - role: firewall
-    - role: app
+    - role: web
