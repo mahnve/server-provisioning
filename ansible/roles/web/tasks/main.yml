@@ -1,0 +1,22 @@
+---
+- name: install nginx
+  apt: name=nginx 
+
+- name: Start nginx
+  service:
+    name: nginx
+    state: started
+    enabled: yes
+
+- name: Open port 80
+  ufw: 
+    rule: allow
+    port: 80
+  notify: reload ufw
+
+- name: upload hello world page
+  template:
+    src: index.html.j2
+    dest: /var/www/html/index.html 
+  notify: restart nginx
+

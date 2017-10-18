@@ -1,3 +1,0 @@
----
-- name: restart app
-  supervisorctl: name=app state=restarted

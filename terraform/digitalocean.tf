@@ -10,7 +10,7 @@ resource "digitalocean_ssh_key" "default" {
   public_key = "${file("${var.public_key}")}"
 }
 
-resource "digitalocean_droplet" "test-server" {
+resource "digitalocean_droplet" "test_server" {
   name="demo-test-server"
   region="ams2"
   size="512mb"

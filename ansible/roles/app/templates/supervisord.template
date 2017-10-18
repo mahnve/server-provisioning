@@ -1,2 +1,0 @@
-[program:app]
-command={{ app_link }}/app

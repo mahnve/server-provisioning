@@ -1,4 +1,0 @@
----
-app_version: 0.1
-app_link: /opt/app
-app_path: "{{ app_link }}-{{ app_version }}"
