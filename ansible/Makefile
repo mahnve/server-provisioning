@@ -1,4 +1,4 @@
 .PHONY: digitalocean
 
 digitalocean:
-	ansible-playbook -i hosts digitalocean.yaml
+	TF_STATE=../terraform/terraform.tfstate ansible-playbook --inventory-file=./bin/terraform-inventory digitalocean.yml
