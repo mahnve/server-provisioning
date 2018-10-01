@@ -2,7 +2,6 @@
 - hosts: local
   become: yes
   roles:
-    - role: base
     - role: firewall
     - role: app
 

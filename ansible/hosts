@@ -1,5 +1,2 @@
-[digital_ocean]
-188.226.152.37 ansible_ssh_user=root
-
-[local]
-192.168.122.185 
+[digitalocean]
+37.139.18.152 ansible_ssh_user=root

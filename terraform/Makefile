@@ -1,5 +1,5 @@
 
-.PHONY: tf-apply tf-plan
+.PHONY: tf-apply tf-plan tf-destroy
 
 tf-apply:
 	terraform apply
